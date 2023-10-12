@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservy Page | Home</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header id="titulo">
+    <img src="logo.png" alt="imagenlogo" class="imagenlogo">
+  </header>
+
+  <main>
+    <section>
+      <h2>Horarios Disponibles</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <th>Sábado</th>
+            <th>Domingo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se generarán dinámicamente los horarios disponibles -->
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Realizar Reserva</h2>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+        </script>
+        <label for="dia">Día:</label>
+        <select id="dia" name="dia" required>
+          <option value="lunes">Lunes</option>
+          <option value="martes">Martes</option>
+          <option value="miercoles">Miércoles</option>
+          <option value="jueves">Jueves</option>
+          <option value="viernes">Viernes</option>
+          <option value="sabado">Sábado</option>
+          <option value="domingo">Domingo</option>
+        </select>
+
+        <button type="submit">Reservar</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

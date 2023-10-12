@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  #titulo {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .imagenlogo {
+    transform: translate(450%, -15%);
+    width: 10%;
+  }
+  
+
+  header {
+    background-color: rgb(15, 175, 36);
+    color: #fff;
+    padding: 20px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h1, h2 {
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  form {
+    display: grid;
+    gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: rgb(7, 22, 226);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
