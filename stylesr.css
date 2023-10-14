@@ -19,7 +19,38 @@ body {
     background-color: rgb(15, 175, 36);
     color: #fff;
     padding: 20px;
+    height: min-content;
   }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  .toolbar {
+    text-align: center;
+    border-top: rgb(0, 0, 0) solid 5px;
+    border-bottom: rgb(0, 0, 0) solid 5px;
+    border-style: ridge;
+  }
+  .toolbar a{
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .toolbar a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(122, 223, 102);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.4em;
+    text-decoration-skip-ink: none;
+  }
+
+
+h1{
+display: inline-block;
+margin: 30px;
+
+}
   
   main {
     padding: 20px;
@@ -29,7 +60,7 @@ body {
     margin-bottom: 20px;
   }
   
-  h1, h2 {
+  h2 {
     margin-top: 20px;
     color: #333;
   }
