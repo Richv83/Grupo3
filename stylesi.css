@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  #titulo {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .imagenlogo {
+    transform: translate(450%, -15%);
+    width: 10%;
+  }
+  header {
+    background-color: rgb(15, 175, 36);
+    color: #fff;
+    padding: 20px;
+    height: 100px;
+  }
+  section {
+    margin-bottom: 20px;
+  }
+  .toolbar {
+    text-align: center;
+    border-top: rgb(0, 0, 0) solid 5px;
+    border-bottom: rgb(0, 0, 0) solid 5px;
+    border-style: ridge;
+  }
+  .toolbar a{
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .toolbar a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(122, 223, 102);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.4em;
+    text-decoration-skip-ink: none;
+  }
+
+
+h1{
+display: inline-block;
+margin: 30px;
+
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30px;
+  margin-top: -20px;
+}
+
+.divison1 img,
+.divison2 img,
+.divison3 img{
+  width: 510px; /* Ajusta el ancho de las imágenes según tus necesidades */
+  height: 350px;
+  border-radius: 40px; 
+  border: rgb(0, 0, 0) solid 2px;
+  margin: 10px;
+}
+
+.divison1,
+.divison2,
+.divison3
+{
+  border-radius: 50px;
+  border-width: 20px;
+  margin: 5px;
+}
+.divison1 p,
+.divison2 p,
+.divison3 p{
+  padding-left: 20px;
+  font-weight: bold;
+}
