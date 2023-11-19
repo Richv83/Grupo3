@@ -41,7 +41,9 @@ if(!$connection){
     echo "No se a podido conectar con el servidor" . mysql_error();
 }
 else{
-    echo "<b><h3>Hemos conectado al servidor</h3></b>";
+    ?>
+    <b><h3>Hemos conectado al servidor</h3></b>
+    <?php
 }
 
 $insertar = "INSERT INTO reserva (nombre,hora,dia) VALUES ('$nombre','$hora','$dia')";
@@ -53,25 +55,40 @@ $result = mysqli_query($connection,$consulta);
 if (!$result){
     echo "No se ha podido realizar la consulta";
 }
-
-echo "<table>";
-    echo "<tr>";
-        echo "<th><h1>Nombre</h1></th>";
-        echo "<th><h1>Hora</h1></th>";
-        echo "<th><h1>Dia</h1></th>";
-    echo "</tr>";
-
+?>
+<table>
+    <tr>
+        <th><h1>Nombre</h1></th>
+        <th><h1>Hora</h1></th>
+        <th><h1>Dia</h1></th>
+    </tr>
+<?php
     while ($colum = mysqli_fetch_array($result)){
-        echo "<tr>";
-            echo "<td><h2>".$colum['nombre']."</h1></td>";
-            echo "<td><h2>".$colum['hora']."</h1></td>";
-            echo "<td><h2>".$colum['dia']."</h1></td>";
-        echo "</tr>";
+        ?>
+        <tr>
+            <td><h2>
+                <?php
+                $colum['nombre'];
+                ?>
+            </h2></td>
+            <td><h2>
+                <?php
+                $colum['hora'];
+                ?>
+            </h2></td>
+            <td><h2>
+                <?php
+                $colum['dia'];
+                ?>
+            </h2</td>
+        </tr>
+        <?php
     }
-
-echo "</table>";
-
+?>
+</table>
+<?php
 mysqli_close($connection);
-echo '<a href="index.html"> Volver Atras</a>';
-
+?>
+<a href="index.html"> Volver Atras</a>
+<?php
 ?>
