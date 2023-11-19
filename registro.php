@@ -31,7 +31,7 @@ $user = "root";
 $pass = "grupo3trabajofinal";
 $host = "localhost";
 
-$connection = mysqli_connect($host,$user,$pass);
+$connection = mysqli_connect($host,$user,$pass,"reservy");
 
 $nombre = $_POST["nombre"];
 $hora = $_POST["hora"];
