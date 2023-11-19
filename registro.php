@@ -90,5 +90,3 @@ if (!$result){
 mysqli_close($connection);
 ?>
 <a href="index.html"> Volver Atras</a>
-<?php
-?>
