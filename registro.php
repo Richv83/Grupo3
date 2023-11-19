@@ -31,7 +31,7 @@ $user = "root";
 $pass = "grupo3trabajofinal";
 $host = "localhost";
 
-$connection = mysqli_connect($host,$user,$pass,"reservy");
+$connection = mysqli_connect("localhost","root","grupo3trabajofinal","reservy");
 
 $nombre = $_POST["nombre"];
 $hora = $_POST["hora"];
@@ -44,17 +44,8 @@ else{
     echo "<b><h3>Hemos conectado al servidor</h3></b>";
 }
 
-$datab = "reservy";
-$db=mysqli_select_db($connection,$datab);
-if(!$db){
-    echo "No se ha podido encontrar la Tabla";
-}
-else{
-    echo "<h3>Tabla seleccionada:</h3>";
-}
-
-$instruccion_SQL = "INSERT INTO reserva (nombre,hora,dia) VALUES ('$nombre','$hora','$dia')";
-$resultado=mysqli_query($connection,$instruccion_SQL);
+$insertar = "INSERT INTO reserva (nombre,hora,dia) VALUES ('$nombre','$hora','$dia')";
+$resultado = mysqli_query($connection,$insertar);
 
 $consulta = "SELECT * FROM reserva";
 
