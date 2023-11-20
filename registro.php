@@ -27,11 +27,11 @@
 </html>
 
 <?php
-$user = "root";
-$pass = "grupo3trabajofinal";
+$user = "grupoarqui";
+$pass = "123";
 $host = "localhost";
 
-$connection = mysqli_connect("localhost","root","grupo3trabajofinal","reservy");
+$connection = mysqli_connect($host,$user,$pass,"reservy");
 
 $nombre = $_POST["nombre"];
 $hora = $_POST["hora"];
@@ -41,9 +41,7 @@ if(!$connection){
     echo "No se a podido conectar con el servidor" . mysql_error();
 }
 else{
-    ?>
-    <b><h3>Hemos conectado al servidor</h3></b>
-    <?php
+    echo "<b><h3>Hemos conectado al servidor</h3></b>";
 }
 
 $insertar = "INSERT INTO reserva (nombre,hora,dia) VALUES ('$nombre','$hora','$dia')";
@@ -55,38 +53,25 @@ $result = mysqli_query($connection,$consulta);
 if (!$result){
     echo "No se ha podido realizar la consulta";
 }
-?>
-<table>
-    <tr>
-        <th><h1>Nombre</h1></th>
-        <th><h1>Hora</h1></th>
-        <th><h1>Dia</h1></th>
-    </tr>
-<?php
+
+echo "<table>";
+    echo "<tr>";
+        echo "<th><h1>Nombre</h1></th>";
+        echo "<th><h1>Hora</h1></th>";
+        echo "<th><h1>Dia</h1></th>";
+    echo "</tr>";
+
     while ($colum = mysqli_fetch_array($result)){
-        ?>
-        <tr>
-            <td><h2>
-                <?php
-                $colum['nombre'];
-                ?>
-            </h2></td>
-            <td><h2>
-                <?php
-                $colum['hora'];
-                ?>
-            </h2></td>
-            <td><h2>
-                <?php
-                $colum['dia'];
-                ?>
-            </h2</td>
-        </tr>
-        <?php
+        echo "<tr>";
+            echo "<td><h2>".$colum['nombre']."</h1></td>";
+            echo "<td><h2>".$colum['hora']."</h1></td>";
+            echo "<td><h2>".$colum['dia']."</h1></td>";
+        echo "</tr>";
     }
-?>
-</table>
-<?php
+
+echo "</table>";
+
 mysqli_close($connection);
+echo '<a href="index.html"> Volver Atras</a>';
+
 ?>
-<a href="index.html"> Volver Atras</a>
