@@ -31,7 +31,7 @@ $user = "grupoarqui";
 $pass = "123";
 $host = "localhost";
 
-$connection = mysqli_connect($host,$user,$pass,"reservy");
+$connection = mysqli_connect($host,$user,$pass,"reservas");
 
 $nombre = $_POST["nombre"];
 $hora = $_POST["hora"];
